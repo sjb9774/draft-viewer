@@ -1,0 +1,7 @@
+.card-wrapper {
+    display: inline-block;
+}
+
+.card-wrapper  img {
+    width: 20vw;
+}

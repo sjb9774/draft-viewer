@@ -1,6 +1,6 @@
 
 class Draft(object):
-
+    '''
     rounds = {
         0: {
             "Luis Scott-Vargas": [
@@ -15,7 +15,7 @@ class Draft(object):
             ]
         }
     }
-
+    '''
     def __init__(self, players=None, picks=None):
         self.players = players
         self.picks = picks
@@ -53,16 +53,17 @@ class DraftParser(object):
         return r
 
     def parse(self):
+	import pudb; pudb.set_trace()
         players = self._contiguous(self.csv_content[0])
         players_picks = {p: [] for p in players}
-        pack = 0
 
         for row in self.csv_content[2:]:
             c_row = self._contiguous(row)
             if c_row:
                 for i, p in enumerate(players):
-                    players_picks[p].append(c_row[i])
-            else:
-                pack += 1
+                    players_picks[players[i]].append(c_row[i])
+        
+	draft = Draft(players=players, picks=players_picks)
+	return draft
 
-
+	
