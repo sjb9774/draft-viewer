@@ -4,7 +4,8 @@
 __pycache__
 node_modules
 .drf
-draft_viewer/static/bower_components/# See https://help.github.com/ignore-files/ for more about ignoring files.
+draft_viewer/static/bower_components/
+# See https://help.github.com/ignore-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -13,7 +14,7 @@ draft_viewer/static/bower_components/# See https://help.github.com/ignore-files/
 /coverage
 
 # production
-/build
+#/build
 
 # misc
 .DS_Store
