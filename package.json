@@ -1,29 +1,16 @@
 {
   "name": "draft-viewer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfile.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sjb9774/draft-viewer.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sjb9774/draft-viewer/issues"
-  },
-  "homepage": "https://github.com/sjb9774/draft-viewer#readme",
-  "devDependencies": {
-      "bower": "^1.7.9",
-      "del": "^2.2.0",
-      "gulp": "^3.9.1",
-      "gulp-browser": "^2.1.4",
-      "gulp-size": "^2.1.0",
-      "reactify": "^1.1.1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
