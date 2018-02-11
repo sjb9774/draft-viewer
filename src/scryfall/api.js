@@ -12,10 +12,9 @@ class Scryfall {
         if (now - this.lastMessageTime < 100) {
             delay = 100 - (now - this.lastMessageTime);
         };
+        var wait = ms => new Promise(resolve => setTimeout(() => resolve(fetch(url)), ms));
         this.lastMessageTime = new Date().valueOf();
-        return new Promise((resolve) => setTimeout(() => {
-            return fetch(url);
-        }, delay));
+        return wait(delay).then(r => r.json());
     }
 
     getCard(params) {
@@ -25,8 +24,8 @@ class Scryfall {
         } else {
             throw TypeError("'name' argument required");
         }
-        if (params.setCode) {
-            requestUrl += "&set=" + params.setCode;
+        if (params.set) {
+            requestUrl += "&set=" + params.set;
         }
         return this.sendRequest(requestUrl);
     }
