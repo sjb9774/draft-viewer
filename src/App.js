@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MtgCard imageUrl="https://img.scryfall.com/cards/large/en/v10/10.jpg?1517813031" />
+        <MtgCard set="M12" name="Primeval Titan" />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
